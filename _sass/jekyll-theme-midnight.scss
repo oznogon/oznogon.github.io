@@ -1,0 +1,228 @@
+@import "normalize";
+@import "fonts";
+// Don't need code highlighting here.
+// @import "rouge-base16-dark.scss";
+
+body {
+  padding: 0 0 20px 0;
+  margin: 0;
+  font: 20px/1.5 'Alegreya', 'Georgia', 'Times New Roman', Times, serif;
+  color: #111;
+  font-weight: normal;
+  background: #eee;
+  background-attachment: fixed !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  margin: 0 0 10px;
+  font-family: 'League Gothic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+p, ul, ol, table, pre, dl {
+  margin: 0;
+}
+
+ul, ol {
+  margin-top: 1em;
+}
+
+h2, h3 {
+  margin-top: 1em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 48px;
+  background-color: #000;
+  color: #fff;
+  padding: 0.25em 0.25em 0.15em;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+a {
+  color: #009;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    color: #00f;
+  }
+}
+
+a small {
+  font-size: 14px;
+  color: #111;
+  margin-top: -0.6em;
+  display: block;
+}
+
+strong {
+  font-family: 'Alegreya', 'Georgia', 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+section img {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 3px solid #ffcc00;
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #333;
+  color: #111;
+  font-family: 'Alegreya', 'Georgia', 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #333;
+}
+
+hr {
+  border: 0;
+  outline: none;
+  height: 3px;
+  margin: 0 0 20px;
+}
+
+dt {
+  color: #111;
+  font-family: 'Alegreya', 'Georgia', 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+#header {
+  z-index: 100;
+  left:0;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  border-bottom: 4px solid #333;
+  box-shadow: 0px 1px 3px rgba(0,0,0,.25);
+}
+
+section {
+  max-width: 650px;
+  padding: 30px 0px 50px 0px;
+  margin: 20px 0;
+  margin-top: 70px;
+
+  #title {
+    border: 0;
+    outline: none;
+    margin: 0 0 50px 0;
+    padding: 0 0 5px 0;
+
+    h1, h2 {
+      font-family: 'League Gothic', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      text-align: center;
+      line-height: 36px;
+    }
+
+    h1 {
+      font-size: 72px;
+    }
+
+    h2 {
+      font-size: 32px;
+      background-color: transparent;
+      color: #000;
+    }
+
+    p {
+      color: #111;
+      font-family: 'Alegreya', 'Georgia', 'Times New Roman', Times, serif;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .credits {
+      font-size: 14px;
+      font-family: 'Alegreya', 'Georgia', 'Times New Roman', Times, serif;
+      font-weight: normal;
+      color: #333;
+      margin-top: -10px;
+
+      &.left {
+        float: left;
+      }
+
+      &.right {
+        float: right;
+      }
+    }
+
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+
+  #title {
+    .credits {
+      display: block;
+      width: 100%;
+      line-height: 30px;
+      text-align: center;
+
+      .left {
+        float: none;
+        display: block;
+      }
+
+      .right {
+        float: none;
+        display: block;
+      }
+    }
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+
+  #header {
+    margin-top: -20px;
+  }
+
+  section {
+    margin-top: 40px;
+  }
+  nav {
+    display: none;
+  }
+}
